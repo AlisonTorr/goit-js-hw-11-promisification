@@ -1,6 +1,5 @@
-const logger = (time) => console.log(`Resolved after ${time}ms`);
-
 const delay = (ms) => {
+  const logger = (time) => console.log(`Resolved after ${time}ms`);
   const promise = new Promise((resolve) => {
     setTimeout(() => {
       resolve(logger(ms));
