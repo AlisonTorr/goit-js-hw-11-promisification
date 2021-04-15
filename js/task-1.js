@@ -4,6 +4,8 @@ const delay = (ms) => {
       resolve(logger(ms));
     }, ms);
   });
+
+  return promise;
 };
 
 const logger = (time) => console.log(`Resolved after ${time}ms`);
