@@ -5,15 +5,15 @@ const users = [
   { name: "Lux", active: false },
 ];
 
-const toggleUserState = (allUsers, userName, callback) => {
-  const updatedUsers = allUsers.map((user) =>
-    user.name === userName ? { ...user, active: !user.active } : user
-  );
+// const toggleUserState = (allUsers, userName, callback) => {
+//   const updatedUsers = allUsers.map((user) =>
+//     user.name === userName ? { ...user, active: !user.active } : user
+//   );
 
-  callback(updatedUsers);
-};
+//   callback(updatedUsers);
+// };
 
-const logger = (updatedUsers) => console.table(updatedUsers);
+// const logger = (updatedUsers) => console.table(updatedUsers);
 
 const toggledUserState = (allUsers, userName) => {
   const updatedUsers = allUsers.map((user) =>
@@ -29,8 +29,8 @@ const toggledUserState = (allUsers, userName) => {
 /*
  * Сейчас работает так
  */
-toggleUserState(users, "Mango", logger);
-toggleUserState(users, "Lux", logger);
+// toggleUserState(users, "Mango", logger);
+// toggleUserState(users, "Lux", logger);
 
 /*
  * Должно работать так
