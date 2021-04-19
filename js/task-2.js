@@ -13,9 +13,7 @@ const users = [
 //   callback(updatedUsers);
 // };
 
-// const logger = (updatedUsers) => console.table(updatedUsers);
-
-const toggledUserState = (allUsers, userName) => {
+const toggleUserState = (allUsers, userName) => {
   const updatedUsers = allUsers.map((user) =>
     user.name === userName ? { ...user, active: !user.active } : user
   );
@@ -23,8 +21,11 @@ const toggledUserState = (allUsers, userName) => {
     resolve(logger);
   });
 
+  return updatedUsers;
   return promise;
 };
+
+const logger = (updatedUsers) => console.table(updatedUsers);
 
 /*
  * Сейчас работает так
