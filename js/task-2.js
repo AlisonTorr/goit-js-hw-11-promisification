@@ -21,8 +21,7 @@ const toggleUserState = (allUsers, userName) => {
     resolve(logger);
   });
 
-  return updatedUsers;
-  return promise;
+  return promise, updatedUsers;
 };
 
 const logger = (updatedUsers) => console.table(updatedUsers);
