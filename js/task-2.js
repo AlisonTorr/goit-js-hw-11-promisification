@@ -18,10 +18,10 @@ const toggleUserState = (allUsers, userName) => {
     user.name === userName ? { ...user, active: !user.active } : user
   );
   const promise = new Promise((resolve) => {
-    resolve(logger);
+    resolve(logger());
   });
 
-  return promise, updatedUsers;
+  return promise;
 };
 
 const logger = (updatedUsers) => console.table(updatedUsers);
