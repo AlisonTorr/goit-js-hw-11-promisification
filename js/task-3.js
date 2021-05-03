@@ -9,7 +9,7 @@ const makeTransaction = (transaction) => {
     const canProcess = Math.random() > 0.3;
     setTimeout(() => {
       if (canProcess) {
-        resolve(`Transaction ${this.id} processed in ${delay}ms`);
+        resolve(`Transaction ${transaction.id} processed in ${delay}ms`);
       } else {
         reject(
           `Error processing transaction ${transaction.id}. Please try again later.`
